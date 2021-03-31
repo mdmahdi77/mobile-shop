@@ -14,6 +14,7 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import PrivateRoute from './PrivateRout/PrivateRoute';
 import Inventory from './Inventory/Inventory';
+import Order from './Order/Order';
 
 export const UserContext = createContext()
 
@@ -31,14 +32,20 @@ function App() {
             <Route path="/inventory">
               <Inventory></Inventory>
             </Route>
-            <PrivateRoute path="/addProduct">
+            <PrivateRoute path="/admin">
               <AddProduct></AddProduct>
             </PrivateRoute>
             <Route path="/checkOut">
               <CheckOut></CheckOut>
             </Route>
-            <PrivateRoute path="/productOrder/:productId">
+            <PrivateRoute path="/productCheckOut/:checkOutId">
               <CheckOut></CheckOut>
+            </PrivateRoute>
+            <PrivateRoute path="/orders">
+              <Order></Order>
+            </PrivateRoute>
+            <PrivateRoute path="/productOrder/:orderId">
+              <Order></Order>
             </PrivateRoute>
             <Route path="/logIn">
               <Login></Login>

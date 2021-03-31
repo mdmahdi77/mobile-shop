@@ -1,15 +1,23 @@
 import { Button } from '../../node_modules/react-bootstrap';
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Product.css'
 import { useHistory } from 'react-router';
+import { UserContext } from '../App';
 
 const Product = (props) => {
     const history = useHistory()
-    const handleProduct = id => {
+
+    const handleCheckOut = id => {
+        history.push(`/productCheckOut/${id}`)
+    }
+
+    const handleOrder = id => {
         history.push(`/productOrder/${id}`)
     }
 
     const {fname, img, lname, brand, price, id} = props.pd
+
+    
     return (
         <div className="products">
             <img src={img} alt=""/>
@@ -17,7 +25,7 @@ const Product = (props) => {
             <p>{brand}</p>
             <div className="priceBtn">
                 <h4>{price}</h4>
-                <Button variant="dark" onClick={() => handleProduct(id)}>Dark</Button>
+                <Button variant="dark" onClick={() => handleCheckOut(id)}>CheckOut</Button>
             </div>
         </div>
     );

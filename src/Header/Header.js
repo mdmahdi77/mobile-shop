@@ -11,8 +11,8 @@ const Header = () => {
             <div className="navList">
                 <ul>
                     <li><Link to="/home">Home</Link></li>
-                    <li><Link to="/addProduct">Add-Product</Link></li>
-                    <li><Link to="/checkOut">CheckOuts</Link></li>
+                    <li><Link to="/admin">Admin</Link></li>
+                    <li><Link to="/orders">Orders</Link></li>
                     <li><Link to="/inventory">Inventory</Link></li>
                     <li className="btn btn-danger"><Link to="/logIn">Log In</Link></li>
                 </ul>
