@@ -15,7 +15,7 @@ const CheckOut = () => {
 
     const [product, setProduct] = useState([])
     useEffect(() => {
-        fetch('http://localhost:7000/products')
+        fetch('https://boiling-earth-08705.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProduct(data))
     },[])
@@ -27,7 +27,7 @@ const CheckOut = () => {
         history.push(`/productOrder/${checkOutId}`)
 
         const newOrder = {...productOrder, ...loggedInUser, ...selectedDate}
-        fetch('http://localhost:7000/addOrders', {
+        fetch('https://boiling-earth-08705.herokuapp.com/addOrders', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(newOrder)

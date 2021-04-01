@@ -1,0 +1,19 @@
+form {
+    position: absolute;
+    left: 31%;  
+    margin-top: 80px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 100px;
+}
+form input{
+    width: 400px;
+    padding: 10px 5px;
+    margin: 10px 0;
+    border: 2px solid crimson;
+    border-radius: 10px;
+}
+h1{
+    color: black;
+}

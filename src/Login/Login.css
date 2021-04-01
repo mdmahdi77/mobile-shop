@@ -1,0 +1,24 @@
+.login{
+    position: absolute;
+    left: 27%;  
+    margin-top: 80px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 100px;
+}
+h1{
+    text-align: center;
+    color: green;
+}
+.mainBtn{
+    width: 500px;
+    height: 40px;
+    background-image: linear-gradient(to right, black, crimson);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 20px;
+}

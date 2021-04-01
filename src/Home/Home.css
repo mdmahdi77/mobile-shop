@@ -1,5 +1,17 @@
 .home{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px
+    grid-gap: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+@media (max-width: 992px){
+    .home{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px){
+    .home{
+       display: block;
+    }
 }

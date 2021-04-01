@@ -1,13 +1,15 @@
 import React from 'react';
+import './OrderDetails.css'
 
 const OrderDetails = (props) => {
-    const {fname, lname, price, description, checkIn} = props.order
+    const {fname, lname, price, brand, checkIn, id} = props.order
+
     return (
-        <div>
-            <h3>{fname} {lname}</h3>
-            <h4>{price}</h4>
-            <p>{description}</p>
-            <h5>{(new Date(checkIn).toDateString("dd/MM/yyyy"))}</h5>
+        <div className="orderList">
+            <h2>{fname} {lname}</h2>
+            <h3>{brand}</h3>
+            <h5>{price}</h5>
+            <h6>{(new Date(checkIn).toDateString("dd/MM/yyyy"))}</h6>
         </div>
     );
 };

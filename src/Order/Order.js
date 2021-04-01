@@ -9,7 +9,7 @@ const Order = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
     useEffect(() => {
-        fetch('http://localhost:7000/orders', {
+        fetch('https://boiling-earth-08705.herokuapp.com/orders?email='+loggedInUser.email, {
             method: 'GET',
             headers: {'Content-type': 'application/json'}
         })
@@ -18,7 +18,7 @@ const Order = () => {
     },[])
     return (
         <div>
-            <h1>Your total Orders {orders.length}</h1>
+            <h1>Your Total Orders ({orders.length})</h1>
             {
                 orders.map(order => <OrderDetails order={order.id} order={order}></OrderDetails>)
             }

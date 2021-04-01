@@ -5,13 +5,13 @@
     margin: 30px 100px;
     border-bottom: 2px solid lightgray;
 }
-.logo{
+.logo .logoHeader{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 50px;
-    color: #0080ff;
+    color: crimson;
 }
-.logo span{
-    color: #00FFFF;
+.logo .logoHeader span{
+    color: black;
 }
 .navList ul{
     display: flex;
@@ -28,4 +28,22 @@
     font-size: 17px;
     font-weight: 600;
     letter-spacing: 1px;
+}
+@media (max-width: 992px){
+
+    .logo .logoHeader{
+        font-size: 30px;
+    }
+    .navList ul li{
+        margin-left: 25px;
+    }
+}
+@media (max-width: 768px){
+
+    .logo .logoHeader{
+        font-size: 23px;
+    }
+    .navList ul li{
+        margin-left: 25px;
+    }
 }

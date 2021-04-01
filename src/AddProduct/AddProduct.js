@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import './AddProduct.css'
 
 
 const AddProduct = () => {
@@ -18,7 +19,7 @@ const AddProduct = () => {
             img: imageUrl
           }
 
-        const uri = `http://localhost:7000/addEvents`
+        const uri = `https://boiling-earth-08705.herokuapp.com/addEvents`
         console.log(eventData)
         fetch(uri, {
             method: 'POST',
@@ -27,7 +28,12 @@ const AddProduct = () => {
             },
             body: JSON.stringify(eventData)
         })
-        .then(res => console.log('server client side', res))
+        .then(res => res.json())
+        .then(data => {
+            if(data){
+                alert('Your product is placed successfully')
+            }
+        })
 
     };
 
@@ -49,15 +55,22 @@ const AddProduct = () => {
 
     return (
         <div>
-            <h1>this is add</h1>
+            <h1>Add To Product</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input name="exampleRequired" type="file" onChange={handleImageUrl} />
                 <input name="id" defaultValue="Required for Unique id" ref={register} />
+                <br/>
                 <input name="fname" defaultValue="F_Name" ref={register} />
+                <br/>
                 <input name="lname" defaultValue="L_Name" ref={register} />
+                <br/>
                 <input name="brandName" defaultValue="Brand" ref={register} />
+                <br/>
                 <input name="price" defaultValue="Price" ref={register} />
+                <br/>
                 <input name="quantity" defaultValue="Quantity" ref={register} />
+                <br/>
+                <input name="exampleRequired" type="file" onChange={handleImageUrl} />
+                <br/>
                 <input type="submit" />
             </form>
         </div>
