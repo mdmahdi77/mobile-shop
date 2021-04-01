@@ -25,7 +25,7 @@ const Product = (props) => {
             <p>{brand}</p>
             <div className="priceBtn">
                 <h4>{price}</h4>
-                <Button variant="dark" onClick={() => handleCheckOut(id)}>CheckOut</Button>
+                <Button variant="dark" onClick={() => handleCheckOut(id)}>Buy Now</Button>
             </div>
         </div>
     );

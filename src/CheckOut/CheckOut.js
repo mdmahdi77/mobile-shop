@@ -39,11 +39,14 @@ const CheckOut = () => {
     }
 
     return (
-        <div className="checkOut">
-            <h3>{productOrder?.fname} {productOrder?.lname}</h3>
-            <h5>{productOrder?.quantity}</h5>
-            <h4>{productOrder?.price}</h4>
-            <Button variant="dark" onClick={() => handleOrder(checkOutId)}>Orders</Button>
+        <div>
+            <h1>Checkout</h1>
+            <div className="checkOut">
+                <h3>{productOrder?.fname} {productOrder?.lname}</h3>
+                <h5>{productOrder?.quantity}</h5>
+                <h4>{productOrder?.price}</h4>
+                <Button variant="dark" onClick={() => handleOrder(checkOutId)}>Orders</Button>
+            </div>
         </div>
     );
 };
