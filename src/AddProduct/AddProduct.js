@@ -8,7 +8,7 @@ const AddProduct = () => {
     const { register, handleSubmit, watch, errors } = useForm();
     const [imageUrl, setImageUrl] = useState(null)
 
-    const onSubmit = (data, event) => {
+    const onSubmit = data => {
         const eventData = {
             id: parseFloat(data.id),
             quantity: parseFloat(data.quantity),
@@ -34,7 +34,7 @@ const AddProduct = () => {
                 alert('Your product is placed successfully')
             }
         })
-            event.target.reset()
+           
     };
 
     const handleImageUrl = event => {
